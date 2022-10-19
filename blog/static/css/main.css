@@ -36,7 +36,7 @@ header {
     flex-direction: column;
      width: 100%; 
     }
-  header > .nav {display: none;}
+  header > .nav, .gallery  {display: none;}
 
 }
 
@@ -59,7 +59,7 @@ header > .nav a {
 }
 .btn-prof { 
 position: relative;
-right: -15%;
+right: -10%;
 }
 
 header > .nav a:hover,
@@ -79,7 +79,7 @@ header > .menu {
 }
 
 #hidden-menu {
-  width: 250px;
+  width: 150px;
   position: fixed;
   top: 0;
   right: -300px;
@@ -295,7 +295,7 @@ flex-direction: column;
   margin-bottom: 20px;
   flex-basis: 30%;
   color: rgb(228, 227, 165);
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Montserrat', sans-serif;
 }
 .services-container>div>h3 {
@@ -342,12 +342,11 @@ flex-direction: column;
 .flex-container {
   display: flex;
   justify-content: space-around;
-  align-items: stretch;
   padding: 10px;
   font-size: 20;
 }
 
-.flex-container>div>h5>a {
+.flex-container>div>p>a {
   text-decoration: none;
   color: #3b3b3b;
 }
