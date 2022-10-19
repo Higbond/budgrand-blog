@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+Удаление статьи
+{% endblock %}
+
+{% block main %}
+<div class="container form-control">
+    <h1> Вы точно хотите удалить статью {{ object.title }}?</h1>
+<form  method="POST" class="form-register">
+    {% csrf_token %}
+
+    <button class="btn btn-outline-danger" type="submit">Да, удалить</button>
+    <a href="{% url 'news' object.id %}"> Нет, отмена</a>
+</form>
+</div>
+
+{% endblock %}

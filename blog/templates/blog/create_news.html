@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block main %}
+<div class="container form-control">
+    <h1> {{ title }}</h1>
+<form  method="POST" class="form-register">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p>{{ p_info }}</p>
+    <button class="btn btn-outline-warning" type="submit">{{ btn_text }}</button>
+
+</form>
+</div>
+
+{% endblock %}

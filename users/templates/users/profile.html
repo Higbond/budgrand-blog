@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+Кабинет пользователя
+{% endblock %}
+
+{% block main %}
+<div class="container form-control">
+    <h1> Кабинет пользователя</h1>
+    <div class="d-flex text-muted pt-3">
+      <img class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="64" height="64" src="{{ user.profile.img.url }}">
+
+      <p class="pb-3 mb-0 small lh-sm border-bottom">
+        <strong class="d-block text-gray-dark">@{{ user.username }}</strong>
+        {% if user.email %}
+          <b>Email:</b> <b>{{ user.email }}</b>
+          {% endif %}
+      </p>
+    </div>
+</div>
+<div class="container">
+    <form  method="POST" class="form-register mt-4">
+    {% csrf_token %}
+    {{ updateUserForm.as_p }}
+    <button class="btn btn-outline-warning" type="submit">Обновить</button>
+</form>
+</div>
+
+{% endblock %}
