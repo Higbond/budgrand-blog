@@ -10,11 +10,7 @@
     <p>{{ object.text|safe }}</p>
     <div class="row">
         <div>
-            <img src="{{ object.avtor.profile.img.url }} " alt="{{ object.avtor }}" class="user_images">
-        </div>
-        <div>
             <span class="text-muted">Публикация: {{ object.date|date:"d E Y в H:i" }}</span>
-    <p><b>Автор:</b><mark>{{ post.avtor }}</mark></p>
         </div>
     </div>
     <hr>
