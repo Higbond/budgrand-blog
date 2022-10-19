@@ -259,15 +259,14 @@ footer .social div {
   margin-left: 15px;
 }
 
-.footer.p {
-position: relative;
-left: ;
-}
+
 
 form  label{
   font-size: 20px;
   display: flex;
   width: 50%;
+  font-family: Montserrat,sans-serif;
+  font-weight: 400;
 }
 form textarea {
   font-size: 20px;
@@ -286,8 +285,17 @@ form textarea {
 form  input{
   display: flex;
   width: 50%;
-  font-size: 20px;
+  height: 50px;
+  font-family: Montserrat,sans-serif;
+  font-weight: 200;
+  font-size: 1em;
+  border: 1px solid #cdd0d1;
+  border-radius: 9px;
+  background-color: #e4efff;
+  padding: 12px 20px;
+  
 }
+
 .services-container {
   display: flex;
   justify-content: space-between;
@@ -356,3 +364,6 @@ flex-direction: column;
   color: #3b3b3b;
 }
 
+.form-control h1 {
+  color: #dfc231;
+}

@@ -79,13 +79,15 @@
     </ul>
 
   </div>
-        {% if messages %}
+   <div class="container">
+      {% if messages %}
           {% for mess in messages %}
             <div class="alert alert-success">
               {{ mess }}
             </div>
           {% endfor %}
         {% endif %}
+   </div>
   {% block main %}
   {% endblock %}
 
