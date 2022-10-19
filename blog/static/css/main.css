@@ -29,6 +29,11 @@ header {
   align-items: center;
 }
 
+.user_iages {
+  width: 64px;
+  height: 64px;
+}
+
 @media(max-width:900px){
   header, .home-page, {width: 100%;}
   .features, .flex-container {flex-direction: column;}

@@ -11,9 +11,6 @@
     <p>{{ post.text|striptags|truncatechars:200 }}</p>
     <div class="row">
         <div>
-            <img src="{{ post.avtor.profile.img.url }} " alt="{{ post.avtor }}" class="user_images">
-        </div>
-        <div>
             <span class="text-muted">Публикация: {{ post.date|date:"d E Y в H:i" }}</span>
     <p><b>Автор:</b><mark>{{ post.avtor }}</mark></p>
         </div>
