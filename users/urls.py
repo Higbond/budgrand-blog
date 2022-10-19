@@ -2,6 +2,7 @@ from django.urls import path
 from .import views as UserViews
 from django.contrib.auth import views as authViews
 
+
 urlpatterns = [
     path('reg/', UserViews.register, name='reg'),
     path('profile/', UserViews.profile, name='profile'),
@@ -19,3 +20,4 @@ urlpatterns = [
         name='password_reset_done'),
 
 ]
+
