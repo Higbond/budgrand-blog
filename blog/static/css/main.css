@@ -48,7 +48,7 @@ header {
     }
   header > .nav, .gallery  {display: none;}
   
-form label, form textarea, form  input {font-size: 16px; width: 80%;}
+
 }
 
 header>a>span {
@@ -263,12 +263,19 @@ footer .social div {
   margin-left: 15px;
 }
 
+form .helptext {
+  display: flex;
 
+}
+form ul {
+  display:flexbox;
 
+}
 form label{
   font-size: 20px;
   display: flex;
-  width: 50%;
+  justify-content: start;
+  width: 80%;
   font-family: Montserrat,sans-serif;
   font-weight: 400;
 }
@@ -286,13 +293,14 @@ form textarea {
 }
 
 
-form  input{
+form input{
   display: flex;
-  width: 50%;
+  justify-content: center;
+  width: 80%;
   height: 50px;
   font-family: Montserrat,sans-serif;
   font-weight: 200;
-  font-size: 1em;
+  font-size: 20px;
   border: 1px solid #cdd0d1;
   border-radius: 9px;
   background-color: #e4efff;
@@ -371,3 +379,5 @@ flex-direction: column;
 .form-control h1 {
   color: #dfc231;
 }
+
+
