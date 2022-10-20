@@ -47,6 +47,8 @@ header {
      width: 100%; 
     }
   header > .nav, .gallery  {display: none;}
+  
+form label, form textarea, form  input {font-size: 16px; width: 80%;}
 }
 
 header>a>span {
@@ -263,7 +265,7 @@ footer .social div {
 
 
 
-form  label{
+form label{
   font-size: 20px;
   display: flex;
   width: 50%;
