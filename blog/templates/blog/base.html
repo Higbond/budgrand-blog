@@ -14,7 +14,7 @@
 </head>
 <body>
    <header>
-    <span class='logo'>Budgrand</span>
+    <a href="{% url 'home' %}" class='logo'><span >Budgrand</span></a>
     <div class="nav">
       <a href="{% url 'home' %}">Главная</a>
       <a href="{% url 'services' %}">Услуги</a>
@@ -57,27 +57,27 @@
       <li><a href="{% url 'about' %}">Про компанию</a></li>
       <li><a href="{% url 'contacts' %}">Контакты</a></li>
       <li><a href="{% url 'blog' %}">Блог</a></li>
-      {% if not user.is_authenticated %}
-      <a href="{% url 'reg' %}" >
-        <button class="btn btn-outline-secondary ">Регистрация</button>
-      </a>
-       <a href="{% url 'user' %}" class="mb-5">
-        <button class="btn btn-outline-secondary">Войти</button>
-      </a>
-      {% else %}
-         <a href="{% url 'blog-add' %}"  >
-        <button class="btn btn-outline-secondary">Добавить статью</button>
-      </a><br>
-         <a href="{% url 'profile' %}"  >
-        <button class="btn btn-outline-secondary">Профиль</button>
-      </a>
-       <a href="{% url 'exit' %}" >
-        <button class="btn btn-outline-secondary">Выйти</button>
-      </a>
-      {% endif %}
-
     </ul>
-
+    <ul class="menu_btn">
+      {% if not user.is_authenticated %}
+      <li> <a href="{% url 'reg' %}" >
+        <button class="btn btn-outline-secondary ">Регистрация</button>
+      </a></li>
+      <li>  <a href="{% url 'user' %}" class="mb-5">
+        <button class="btn btn-outline-secondary">Войти</button>
+      </a></li>
+       {% else %}
+       <li>  <a href="{% url 'blog-add' %}"  >
+        <button class="btn btn-outline-secondary">Добавить статью</button>
+      </a></li>
+      <li>   <a href="{% url 'profile' %}"  >
+        <button class="btn btn-outline-secondary">Профиль</button>
+      </a></li>
+      <li> <a href="{% url 'exit' %}" >
+        <button class="btn btn-outline-secondary">Выйти</button>
+      </a></li>
+      {% endif %}
+    </ul>
   </div>
    <div class="container">
       {% if messages %}

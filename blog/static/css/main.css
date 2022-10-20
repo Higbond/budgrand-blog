@@ -33,22 +33,29 @@ header {
   width: 64px;
   height: 64px;
 }
-
+@media(min-width:600px){
+  .menu_btn {display: none;}
+}
 @media(max-width:900px){
-  header, .home-page, {width: 100%;}
-  .features, .flex-container {flex-direction: column;}
+  header, .home-page {width: 100%;}
+   .flex-container {flex-direction: column;}
+   .features { flex-direction: column; 
+    align-items: center;
+    justify-content: center; }
   footer {
     flex-direction: column;
      width: 100%; 
     }
   header > .nav, .gallery  {display: none;}
-
 }
 
-
-header > .logo {
+header>a>span {
   font-size: 30px;
   font-weight: 700;
+  text-decoration: none;
+  color: #777575;
+  font-weight: 700;
+  transition: color 600ms ease;
 }
 
 header > .nav {
@@ -76,12 +83,7 @@ header > .menu {
   font-size: 24px;
 }
 
-.fixed {
-  position: sticky;
-  top: 0;
-  left: 0;
-  border-bottom: 2px solid silver;
-}
+
 
 #hidden-menu {
   width: 150px;
@@ -174,14 +176,14 @@ header > .menu {
 
 .features {
   display: flex;
-  justify-content:center;
   width: 100%;
+  margin-top: 50px;
+  justify-content:center;
 }
 
 .features > div {
   width: 300px;
   text-align: center;
-  margin: 50px 10px;
 }
 
 .features > div img {
@@ -200,7 +202,7 @@ header > .menu {
 
 .gallery {
   width: 70%;
-  margin: 50px 10%;
+  margin: 50px 13%;
   position: relative;
   left: 100px;
 }
@@ -228,7 +230,7 @@ header > .menu {
 
 
 footer {
-  width: 90%;
+  width: 100%;
   padding: 50px 5%;
   display: flex;
   justify-content: space-between;
